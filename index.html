@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript File -->
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="./js/categoryObj.js"></script>
+    <script defer src="./js/api.js"></script>
+    <script defer src="./js/logout.js"></script>
+    <script defer src="./js/index.js"></script>
+
+    <!-- fontawesome-->
+    <script
+      defer
+      src="https://kit.fontawesome.com/d6368aa91c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <!-- TITLE IMAGE -->
+    <link
+      href="./images/movieagora_icon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <title>MOVIE AGORA</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-column header-left-column">
+        <a class="logo-box" href="./index.html">
+          <img
+            src="./images/movieagora_icon.png"
+            class="logoImage"
+            alt="logoImage"
+          />
+          <h3 class="logoName">MOVIE AGORA</h3>
+        </a>
+      </div>
+
+      <div class="header-column header-right-column">
+        <!-- Log In Button -->
+        <button type="button" class="btn btn-warning loginButton mt-25 mr-30">
+          로그인
+        </button>
+
+        <!-- Log Out Button -->
+        <button type="button" class="btn btn-warning logoutButton mt-25 mr-30">
+          로그아웃
+        </button>
+
+        <!-- My Page Button -->
+        <button type="button" class="btn btn-warning myPageButton mt-25 mr-30">
+          마이페이지
+        </button>
+      </div>
+    </header>
+
+    <!-- TITLE -->
+    <main>
+      <section>
+        <div class="back-image"></div>
+        <div class="title-text">
+          <h1 class="title-main">MOVIE<br />AGORA</h1>
+          <br /><br />
+          <h2>
+            현재 인기인 영화 · 드라마를 추천받고, 다른 사람들과 토론해 보세요
+          </h2>
+        </div>
+      </section>
+      <section class="trend-container section-container">
+        <div class="trend-title-box section-title-box">
+          <i class="fas fa-poll"></i>
+          <span class="trend-title section-title">트렌드</span>
+        </div>
+        <div class="trend-image"></div>
+        <div class="trend-content-box">
+          <article class="trend-tv-box">
+            <span class="trend-tv-title">TV</span>
+            <div class="trend-tv trends"></div>
+          </article>
+          <article class="trend-movie-box">
+            <span class="trend-movie-title">MOVIE</span>
+            <div class="trend-movie trends"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="category-container section-container">
+        <div class="category-title-box section-title-box">
+          <i class="fas fa-sort"></i>
+          <span class="category-title section-title">카테고리</span>
+        </div>
+        <div class="category-box">
+          <article class="category-tv-box tv-box">
+            <span class="category-tv-title">TV</span>
+            <div class="sorting-tv-container">
+              <div class="sorting-tv sortings">
+                <a
+                  href="./html/category.html?category=2&sorting=1&title=금일 방영"
+                  >금일 방영</a
+                >
+                <a href="./html/category.html?category=2&sorting=2&title=인기순"
+                  >인기순</a
+                >
+                <a href="./html/category.html?category=2&sorting=3&title=평가순"
+                  >평가순</a
+                >
+              </div>
+            </div>
+            <div class="genre-tv-container">
+              <div class="genre-tv genres"></div>
+            </div>
+          </article>
+          <hr />
+          <article class="category-movie-box movie-box">
+            <label class="category-movie-title" for="movie-box">MOVIE</label>
+            <div class="sorting-movie-container">
+              <div class="sorting-movie sortings">
+                <a href="./html/category.html?category=1&sorting=4&title=상영중"
+                  >상영중</a
+                >
+                <a href="./html/category.html?category=1&sorting=2&title=인기순"
+                  >인기순</a
+                >
+                <a href="./html/category.html?category=1&sorting=3&title=평가순"
+                  >평가순</a
+                >
+                <a href="./html/category.html?category=1&sorting=5&title=곧개봉"
+                  >곧개봉</a
+                >
+              </div>
+            </div>
+            <div class="genre-movie-container">
+              <div class="genre-movie genres"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Copyright Section-->
+    <footer class="copyright py-4 text-center text-white">
+      <div>
+        <small>Copyright &copy; Movie Agora 2021</small>
+      </div>
+    </footer>
+  </body>
+</html>

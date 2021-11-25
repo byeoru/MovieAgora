@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/detail.css" />
+
+    <!-- TITLE IMAGE -->
+    <link
+      href="../images/movieagora_icon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+
+    <!-- fontawesome -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/d6368aa91c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript File -->
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="../js/genreObj.js"></script>
+    <script defer src="../js/categoryObj.js"></script>
+    <script defer src="../js/api.js"></script>
+    <script defer src="../js/detail.js"></script>
+    <script defer src="../js/addComment.js"></script>
+
+    <title id="page-title"></title>
+  </head>
+  <body>
+    <header>
+      <!-- 배경 이미지 -->
+      <div class="back-image"></div>
+      <!-- 상단부 -->
+      <section class="detail-header-row">
+        <img class="representative-image" alt="poster" />
+        <div class="infobox">
+          <span class="info-title"></span>
+          <div class="info-average-box">
+            <div class="average-column">
+              <i class="fas fa-star"></i>
+              <span class="average-value"></span>
+            </div>
+            <div class="average-column">
+              <i class="fas fa-vote-yea"></i>
+              <span class="average-vote-count"></span>
+            </div>
+            <div class="bookmark-column">
+              <i class="fas fa-bookmark checkedBtn"></i>
+              <i class="far fa-bookmark uncheckedBtn"></i>
+            </div>
+          </div>
+          <div class="info-status"></div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- main section -->
+      <section class="detail-main-row">
+        <article class="overview-container">
+          <span class="article-title">개요</span>
+          <div class="article-main overview-box"></div>
+        </article>
+
+        <article class="genre-container">
+          <span class="article-title">장르</span>
+          <div class="article-main">
+            <ul class="genre-list"></ul>
+          </div>
+        </article>
+
+        <article class="runtime-container">
+          <span class="article-title"></span>
+          <div class="article-main runtime-box"></div>
+        </article>
+
+        <article class="poster-container">
+          <span class="article-title">포스터</span>
+          <div class="article-main poster-box"></div>
+        </article>
+      </section>
+      <!-- Comment Section -->
+      <section id="comments" class="comment-area article-main container">
+        <div id="comment-head">
+          <!-- 갯수 조정 필요 -->
+          <span id="comments-count">0</span> Comment(s)
+        </div>
+        <textarea
+          name="new_comment"
+          class="comment-field"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <input type="button" value="comment" class="submit-button" />
+        <!-- <button type="submit" onclick="createComment()">Submit</button> -->
+        <div id="comment-rows"></div>
+      </section>
+    </main>
+
+    <!-- Copyright Section-->
+    <footer class="copyright py-4 text-center text-white">
+      <div>
+        <small>Copyright &copy; Your Website 2021</small>
+      </div>
+    </footer>
+  </body>
+</html>

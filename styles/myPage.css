@@ -1,0 +1,139 @@
+@import "./reset.css";
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(20, 21, 23);
+  background-image: url("https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: overlay;
+  min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  width: 0.7em;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(78, 73, 76);
+  border: 0.1em solid rgb(85, 78, 83);
+  border-radius: 2em;
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid white;
+}
+
+/*라디오버튼 숨김*/
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  text-align: center;
+  color: #555;
+  border: 1px solid transparent;
+}
+
+form label {
+  font-weight: bold;
+  color: white;
+  padding: 0px 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*input 클릭시, label 스타일*/
+input:checked + label {
+  color: white;
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #ffffff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+
+.myPage {
+  width: 100%;
+  max-width: 500px;
+  min-height: 800px;
+  padding: 15px;
+  margin: auto;
+  background-color: rgb(20, 21, 23);
+  opacity: 0.85;
+}
+
+.form-floating {
+  margin-bottom: 10px;
+}
+
+#pw_same,
+#pwLength,
+#help_name {
+  font-size: small;
+  color: orange;
+  margin-top: 3px;
+}
+
+#help_email,
+#help_birth {
+  font-size: small;
+  color: white;
+}
+
+#userEmail {
+  background-color: rgb(170, 170, 170);
+}
+
+p,
+h3 {
+  color: aliceblue;
+}
+
+h3 {
+  text-align: center;
+}
+
+#body_title {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+
+#signup_button {
+  margin-top: 30px;
+  background-color: red;
+  border: red;
+  font-weight: bold;
+}
+
+#signout_button {
+  margin-top: 350px;
+  background-color: red;
+  border: red;
+  font-weight: bold;
+}
+
+.bookmark-container a {
+  text-decoration: none;
+  color: antiquewhite;
+  font-size: 1.3em;
+}
